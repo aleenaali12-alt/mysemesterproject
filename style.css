@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: skyblue;
+  text-align: center;
+}
+
+header {
+  background: #090000;
+  color: rgb(254, 252, 252);
+  padding: 0.5px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: url('/images/Travel-Download-Free-Images-HD.jpg') no-repeat center/cover;
+  color: rgb(15, 3, 3);
+  padding: 150px 200px;
+}
+
+button {
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkorange;
+}
+
+section {
+  background-image: url('images/realistic-travel-background-with-elements_52683-77784.jpg');
+  background-position: center;
+  padding: 160px 40px;
+}
+footer {
+  background: #544f62;
+  background-color: skyblue;
+  padding: 15px;
+  margin-top: 30px;
+}
+.card-body{
+  background-color: aliceblue;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-body .btn{
+  margin-top: auto;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+/* Explore button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #3e24cd;   /* blue background */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #129512;   /* darker green when hovered */
+  transform: scale(1.05); /* grows slightly */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.about-features-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.about-features-grid h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}

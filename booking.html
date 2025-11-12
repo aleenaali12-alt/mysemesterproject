@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Flight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("/images/pink-airplane-flight-blue-background-3d-illustration_121658-1090.jpg") no-repeat center center/cover;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 12px;
+      width: 320px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .close-btn:hover {
+      background: darkred;
+    }
+
+    .form-container h2 {
+      margin-bottom: 15px;
+      text-align: center;
+      color: #333;
+    }
+
+    .form-container label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    .form-container input:focus {
+      border: 1px solid #2196f3;
+    }
+
+    .btn {
+      margin-top: 18px;
+      width: 100%;
+      padding: 12px;
+      background: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1976d2;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <button class="close-btn" onclick="goBack()">×</button>
+
+    <h2>Book Your Flight</h2>
+    <form id="bookingForm">
+      <label>Destination</label>
+      <input type="text" id="destination" readonly>
+
+      <label>Price</label>
+      <input type="text" id="price" readonly>
+
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name">
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email">
+
+      <label>Date</label>
+      <input type="date">
+
+      <button type="submit" class="btn">Confirm</button>
+    </form>
+  </div>
+
+  <script>
+    // Fill form with URL parameters
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("destination").value = params.get("destination");
+    document.getElementById("price").value = "$" + params.get("price");
+
+    // Back button
+    function goBack() {
+      window.location.href = "index.html";
+    }
+
+    // Show thank you popup on form submit
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("bookingForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop refresh
+        alert("Thank you! Your flight has been booked ✈");
+      });
+    });
+  </script>
+</body>
+</html>
