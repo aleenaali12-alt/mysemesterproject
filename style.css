@@ -23,7 +23,7 @@ nav a:hover {
 }
 
 .hero {
-  background: url('/images/Travel-Download-Free-Images-HD.jpg') no-repeat center/cover;
+  background: url("/images/Travel-Download-Free-Images-HD.jpg") no-repeat center/cover;
   color: rgb(15, 3, 3);
   padding: 150px 200px;
 }
@@ -132,4 +132,5 @@ footer {
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+
 }
